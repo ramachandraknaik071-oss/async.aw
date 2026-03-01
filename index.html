@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>with and without async</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="wrapper">
+
+    <header class="header">
+        <h1>with and without async</h1>
+    </header>
+
+    <section class="action-section">
+        <button class="btn async-btn" onclick="startFetch('async')">
+            With Async
+        </button>
+
+        <button class="btn promise-btn" onclick="startFetch('promise')">
+            Without Async
+        </button>
+    </section>
+
+    <!-- Output will render here -->
+    <section class="output-section"></section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
