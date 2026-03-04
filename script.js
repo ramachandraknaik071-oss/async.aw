@@ -4,7 +4,7 @@ const buttons = document.querySelectorAll(".btn");
 
 function startFetch(type) {
 
-    // Remove active highlight
+
     buttons.forEach(btn => btn.classList.remove("active"));
     document.querySelector(`.${type}-btn`).classList.add("active");
 
@@ -14,7 +14,6 @@ function startFetch(type) {
     type === "async" ? loadAsync() : loadPromise();
 }
 
-/* ---------- ASYNC VERSION ---------- */
 
 async function loadAsync() {
     console.clear();
@@ -43,8 +42,6 @@ function loadPromise() {
     console.log("4 End (Runs Before Data)");
 }
 
-/* ---------- RENDER USER ---------- */
-
 function render(user) {
     output.innerHTML = `
         <div class="profile-card">
@@ -68,4 +65,5 @@ function render(user) {
 
 function showError(message) {
     output.innerHTML = `<p class="error">${message}</p>`;
+
 }
